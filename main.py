@@ -3,13 +3,17 @@ class Messages:
     sad_messages = [
         "Por trás do meu sorriso, há um coração pesado de dor",
         "Às vezes, as lágrimas são a única voz do coração machucado",
-        "Não deixei de te amar, mas tive que desistir de você"
+        "Não deixei de te amar, mas tive que desistir de você",
+        "O silêncio é a voz da minha tristeza",
+        "A tua ausência faz me pensar, chorando, lágrimas de saudade"
     ]
 
     happy_messages = [
         "Sorria, a vida é um presente",
         "A felicidade é um estado de espírito",
-        "Hoje meu coração vibra de alegria!"
+        "Hoje meu coração vibra de alegria!",
+        "A vida é mais leve com bom-humor",
+        "A felicidade está nas coisas mais simples"
     ]
 
     def instructions(self):
@@ -20,11 +24,9 @@ class Messages:
 
 class MessageScreen(Messages):
 
-
     def __init__(self, emotion):
         self.emotion = emotion
     
-
     def display(self):
 
         if self.emotion == 'sad':
