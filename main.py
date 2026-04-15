@@ -2,18 +2,20 @@ class Messages:
 
     sad_messages = [
         "Por trás do meu sorriso, há um coração pesado de dor",
-        "Às vezes, as lágrimas são a única voz do coração machucado"
+        "Às vezes, as lágrimas são a única voz do coração machucado",
+        "Não deixei de te amar, mas tive que desistir de você"
     ]
 
     happy_messages = [
         "Sorria, a vida é um presente",
-        "A felicidade é um estado de espírito"
+        "A felicidade é um estado de espírito",
+        "Hoje meu coração vibra de alegria!"
     ]
 
     def instructions(self):
         txt = 'Para receber as mesagens em MessageScreen(), digite sad ou happy.'
         line = '-' * len(txt)
-        return f'{txt}\n{line}'
+        return f'{line}\n{txt}\n{line}'
 
 
 class MessageScreen(Messages):
@@ -26,12 +28,12 @@ class MessageScreen(Messages):
     def display(self):
 
         if self.emotion == 'sad':
-            for msn in self.sad_messages:
-                print(msn)
+            for i,msn in enumerate(self.sad_messages):
+                print(f'Mensagem Triste [{i}] -> \033[4m{msn}\033[0m')
         
         elif self.emotion == 'happy':
-            for msn in self.happy_messages:
-                print(msn)
+            for i, msn in enumerate(self.happy_messages):
+                print(f'Mensagem Alegre [{i}] -> \033[4m{msn}\033[0m')
         
         else:
             print('Somente sad ou happy!')
